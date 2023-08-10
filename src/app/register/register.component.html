@@ -1,0 +1,8 @@
+<section>
+    <form [formGroup]="registerForm" (submit)="registerUser()">
+      <input id="first-name" type="text" formControlName="firstName" placeholder="Name">
+      <input id="last-name" type="text" formControlName="lastName" placeholder="Surname">
+      <input id="phone-number" type="text" formControlName="phoneNumber" placeholder="Phone number">
+      <button class="primary" type="submit">Register</button>
+    </form>
+</section>
