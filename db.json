@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "firstName": "Tinashe",
+      "lastName": "Chinyanga",
+      "phoneNumber": "+263774666249"
+    },
+    {
+      "id": 1,
+      "firstName": "Agnes",
+      "lastName": "Mangenje",
+      "phoneNumber": "+263780624205"
+    },
+    {
+      "{\"firstName\": \"Mutsa\", \"lastName\": \"M\", \"phoneNumber\": \"0000\"}": "",
+      "id": 2
+    },
+    {
+      "{\"firstName\": \"Mutsa\", \"lastName\": \"M\", \"phoneNumber\": \"0000\"}": "",
+      "id": 3
+    },
+    {
+      "{\"firstName\": \"Mutsa\"}": "",
+      "id": 4
+    },
+    {
+      "{firstName: Mutsa}": "",
+      "id": 5
+    },
+    {
+      "firstName": "",
+      "id": 6
+    },
+    {
+      "firstName": "",
+      "Mutsa": "",
+      "id": 7
+    },
+    {
+      "firstName": "",
+      "lastName, M": "",
+      "id": 8
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "id": 9
+    },
+    {
+      "{\"firstName\": \"M\"}": "",
+      "id": 10
+    },
+    {
+      "{firstName: M}": "",
+      "id": 11
+    },
+    {
+      "firstName": "",
+      "id": 12
+    },
+    {
+      "firstName": "",
+      "id": 13
+    },
+    {
+      "firstName": "Test",
+      "lastName": "Post",
+      "phoneNumber": "",
+      "id": 14
+    },
+    {
+      "firstName": "Test",
+      "lastName": "Post",
+      "phoneNumber": "",
+      "id": 15
+    },
+    {
+      "firstName": "Test",
+      "lastName": "Post",
+      "phoneNumber": "123455",
+      "id": 16
+    }
+  ]
+}

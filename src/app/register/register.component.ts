@@ -13,6 +13,9 @@ import { UserRegistrationService } from '../userregistration.service';
     CommonModule,
     ReactiveFormsModule
   ],
+  providers: [
+    UserRegistrationService
+  ],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
