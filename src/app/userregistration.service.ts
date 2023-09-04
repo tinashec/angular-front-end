@@ -13,14 +13,15 @@ export class UserRegistrationService {
 
   url = 'http://localhost:8081/user/register';
 
-  // service function that prints to the console for now
-  async registerUser(name: string, surname: string, number: string){
+  // service function that send request to the backend and prints the response to the console for now
+  async registerUser(name: string, surname: string, number: string, password: string){
     
     // set the user 
     let user: User = {
       firstName: name,
       lastName: surname,
-      phoneNumber: number
+      phoneNumber: number,
+      password: password
     };
 
     // make the POST request and log the response

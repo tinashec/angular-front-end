@@ -1,0 +1,8 @@
+<p>Login</p>
+<section>
+    <form [formGroup]="loginForm" (submit)="loginUser()">
+        <input id="phone-number" type="text" formControlName="phoneNumber" placeholder="Phone e.g. +263771123456">
+        <input id="password" type="password" formControlName="password" placeholder="Password">
+        <button class="primary" type="submit">Login</button>
+    </form>
+</section>
