@@ -5,13 +5,15 @@ import { User } from '../user';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import { UserRegistrationService } from '../userregistration.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
   imports: [ 
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterLink
   ],
   providers: [
     UserRegistrationService
@@ -29,7 +31,8 @@ export class RegisterComponent {
   registerForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
-    phoneNumber: new FormControl('')
+    phoneNumber: new FormControl(''),
+    password: new FormControl('')
   });
 
   constructor(){}
@@ -39,14 +42,16 @@ export class RegisterComponent {
     this.userService.registerUser(
       this.registerForm.value.firstName ?? '',
       this.registerForm.value.lastName ?? '',
-      this.registerForm.value.phoneNumber ?? ''
+      this.registerForm.value.phoneNumber ?? '',
+      this.registerForm.value.password ?? ''
     );
   }
 
   // user interface to hold the user details
   user: User = {
-    firstName: 'Tinashe',
-    lastName: 'Chinyanga',
-    phoneNumber: '+263774666249'
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    password: ''
   }
 }

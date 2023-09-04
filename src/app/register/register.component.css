@@ -7,13 +7,14 @@
     justify-content: space-around;
   }
 
-  input[type="text"] {
+  input[type="text"],
+  input[type="password"] {
     border: solid 1px rgb(242, 243, 243);
     padding: 10px;
     border-radius: 8px;
     margin-right: 4px;
     display: inline-block;
-    width: 30%;
+    width: 40%;
   }
   
   button {
@@ -22,7 +23,7 @@
     background: rgb(242, 243, 243);
     color: rgb(28, 28, 28);
     border-radius: 8px;
-    width: 35%;
+    width: 95%;
   }
   
   @media (min-width: 500px) and (max-width: 768px) {
