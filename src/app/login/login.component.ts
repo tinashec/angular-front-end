@@ -33,5 +33,6 @@ export class LoginComponent {
   // register the login function
   loginUser(){
     this.loginService.loginUser(this.loginForm.value.phoneNumber ?? '',  this.loginForm.value.password ?? '');
+    
   }
 }

@@ -5,7 +5,7 @@ import { User } from '../user';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import { UserRegistrationService } from '../userregistration.service';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -32,10 +32,10 @@ export class RegisterComponent {
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     phoneNumber: new FormControl(''),
-    password: new FormControl('')
+    pin: new FormControl('')
   });
 
-  constructor(){}
+  constructor(private router: Router){}
 
   // register the user function
   registerUser(){
@@ -43,8 +43,16 @@ export class RegisterComponent {
       this.registerForm.value.firstName ?? '',
       this.registerForm.value.lastName ?? '',
       this.registerForm.value.phoneNumber ?? '',
-      this.registerForm.value.password ?? ''
-    );
+      this.registerForm.value.pin ?? '',
+    ).subscribe ({
+      next: (response) => {
+        this.router.navigate(['/home']);
+        }, 
+      error: (error) => {
+        // unable to register
+        console.log (`Error message: `, error);
+        }
+    });
   }
 
   // user interface to hold the user details
@@ -52,6 +60,6 @@ export class RegisterComponent {
     firstName: '',
     lastName: '',
     phoneNumber: '',
-    password: ''
+    pin: '',
   }
 }

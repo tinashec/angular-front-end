@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { User } from './user';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,21 +15,18 @@ export class UserRegistrationService {
   url = 'http://localhost:8081/user/register';
 
   // service function that send request to the backend and prints the response to the console for now
-  async registerUser(name: string, surname: string, number: string, password: string){
+  registerUser(name: string, surname: string, number: string, password: string): Observable<any>{
     
     // set the user 
-    let user: User = {
+    const user: User = {
       firstName: name,
       lastName: surname,
       phoneNumber: number,
-      password: password
+      pin: password
     };
 
-    // make the POST request and log the response
-    this.http.post(this.url, user).subscribe(Response => {
-      // ToDo: handle the response
-    });
-    console.log(`User registered; name: `, user.firstName, `last name: `, user.lastName, `phone number: `, user.phoneNumber);
+    const response = this.http.post(this.url, user);
+    return response;
   }
 }
 
