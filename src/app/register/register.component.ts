@@ -32,7 +32,7 @@ export class RegisterComponent {
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     phoneNumber: new FormControl(''),
-    pin: new FormControl('')
+    password: new FormControl('')
   });
 
   constructor(private router: Router){}
@@ -43,7 +43,7 @@ export class RegisterComponent {
       this.registerForm.value.firstName ?? '',
       this.registerForm.value.lastName ?? '',
       this.registerForm.value.phoneNumber ?? '',
-      this.registerForm.value.pin ?? '',
+      this.registerForm.value.password ?? '',
     ).subscribe ({
       next: (response) => {
         this.router.navigate(['/home']);
@@ -60,6 +60,6 @@ export class RegisterComponent {
     firstName: '',
     lastName: '',
     phoneNumber: '',
-    pin: '',
+    password: '',
   }
 }

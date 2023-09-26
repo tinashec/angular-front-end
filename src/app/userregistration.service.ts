@@ -22,7 +22,7 @@ export class UserRegistrationService {
       firstName: name,
       lastName: surname,
       phoneNumber: number,
-      pin: password
+      password: password
     };
 
     const response = this.http.post(this.url, user);
